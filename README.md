@@ -2,9 +2,9 @@
 
 ## This project to improve my Skills in coding and its just for an educational purposes!
 
-'''
-Note : Any type of copying and redistribution of this source code may lead to a copyright strike
-'''
+```
+~ Note : Any type of copying and redistribution of this source code may lead to a copyright strike
+```
 
 ## Variables
 
