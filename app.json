@@ -1,29 +1,28 @@
 {
-     "name": "Copy Bot",
-     "description": "A simple telegram Personal Message Copy To Channel Paste Bot",
-     "keywords": [
-          "telegram",
-          "copy",
-          "pyrogram"
-     ],
-     "website": "https://github.com/rishyee/CopyBot",
-     "repository": "https://github.com/rishyee/CopyBot",
-     "env": {
-          "BOT_TOKEN": {"description": "Your TOKEN obtained from Botfather Bot", "required": true},
-          "API_ID": {"description": "Your API_ID obtained from Telegram API pannel", "required": true},
-          "API_HASH": {"description": "Your API_HASH obtained from Telegram API pannel", "required": true},
-          "ADMIN": {"description": "Your Telegram ID", "required": true},
-          "CHANNEL_ID": {"description": "Channel iD of which channel the message should be posted", "required": true},
-     },
-     "buildpacks": [
-          {
-               "url": "heroku/python"
-          }
-     ],
-     "formation": {
-          "worker": {
-               "quantity": 1,
-               "size": "free"
-          }
-     }
+    "name": "CopyBot",
+    "description": "A simple Copy Bot",
+    "keywords": [
+        "telegram",
+        "channel",
+        "copy"
+    ],
+    "website": "https://github.com/rishyee/copybot",
+    "repository": "https://github.com/rishyee/copybot",
+    "env": {
+        "BOT_TOKEN": {"description": "Your Bot Token obtained from @botfather", "required": true},
+        "API_HASH": {"description": "Your API Hash obtained from my.telegram.org", "required": true},
+        "CHANNEL_ID": {"description": "Your destination Channel Id, add -100 prefix", "required": true},
+        "ADMIN": {"description": "Your telegram ID", "value": "ANYTHING"},
+        "APP_ID": {"description": "Your APP ID obtained from my.telegram.org", "required": true}
+    },
+    "buildpacks": [
+        {"url": "heroku/python"}
+        ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "heroku-20"
 }
