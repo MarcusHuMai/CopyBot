@@ -22,3 +22,4 @@ async def copy(client: Client, message):
                )
           await message.reply(f"Successfully Copied your message to {dd.link}")
                
+Client.run()
