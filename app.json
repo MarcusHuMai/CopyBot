@@ -1,0 +1,30 @@
+{
+     "name": "Copy Bot",
+     "description": "A simple telegram Personal Message Copy To Channel Paste Bot",
+     "keywords": [
+          "telegram",
+          "copy",
+          "pyrogram"
+     ],
+     "website": "https://github.com/rishyee/CopyBot",
+     "repository": "https://github.com/rishyee/CopyBot",
+     "env": {
+          "BOT_TOKEN": {"description": "Your TOKEN obtained from Botfather Bot", "required": true},
+          "API_ID": {"description": "Your API_ID obtained from Telegram API pannel", "required": true},
+          "API_HASH": {"description": "Your API_HASH obtained from Telegram API pannel", "required": true},
+          "ADMIN": {"description": "Your Telegram ID", "required": true},
+          "CHANNEL_ID": {"description": "Channel iD of which channel the message should be posted", "required": true},
+     },
+     "buildpacks": [
+          {
+               "url": "heroku/python"
+          }
+     ],
+     "formation": {
+          "worker": {
+               "quantity": 1,
+               "size": "free"
+          }
+     },
+     "stack": "heroku 20"
+}
