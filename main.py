@@ -12,7 +12,7 @@ Client = Client("Copy bot", api_id = API_ID, api_hash = API_HASH, bot_token = BO
 
 @Client.on_message(filters.text | filters.document | filters.photo | filters.audio)
 async def copy(client: Client, message):
-     if message.from_user.id not in ADMIN:
+     if int(message.from_user.id) not in ADMIN:
           await message.reply_sticker("CAACAgUAAxkBAAIBT2J5_syo2NP8OB5oDyvXpAABPPZlDwACfwIAAhwWkFT5wl_pR2WTciQE")
      else:
           dd=await client.copy_message(
